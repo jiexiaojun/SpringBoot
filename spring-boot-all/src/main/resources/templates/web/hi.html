@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:include="web/layout :: htmlhead" th:with="title='Hi'"></head>
+
+  <body>
+    <div th:replace="web/layout :: navbar">(navbar)</div>
+    <div class="container">
+      <div class="starter-template">
+        <h1>Spring MVC / Thymeleaf / Bootstrap</h1>
+        <p class="lead" th:text="${greeting}">(greeting)</p>
+        <p>The current time is <span th:text="${currentTime}">(time)</span></p>
+      </div>
+    </div>
+	
+    <div th:include="web/layout :: footer" id="footer">(footer)</div>
+	
+	<p>如果看到该页面，说明WebApplication启动成功 初步了解spring-boot-web 成功！！！！！！！！</p>
+  </body>
+</html>

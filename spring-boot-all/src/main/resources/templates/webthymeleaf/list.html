@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Messages : View All</title>
+	</head>
+	<body>
+		<div class="container">
+			<div th:replace="webthymeleaf/fragments :: navbar"></div>
+			<div class="float-right mt-2">
+				<a class="btn btn-primary btn-sm" href="form.html" th:href="@{/message/(form)}">Create Message</a>
+			</div>
+			<h4 class="float-left mt-2">Messages : View all</h4>
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Created</th>
+						<th>Summary</th>
+						<th>Text</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:if="${messages.empty}">
+						<td colspan="3">No messages</td>
+					</tr>
+					<tr th:each="message : ${messages}">
+						<td width="50" align="center"><a href="view.html" th:href="@{'/message/find/id=' + ${message.id}}"
+							th:text="${message.id}"> id </a></td>
+						<td width="300" align="center" th:text="${#calendars.format(message.created)}">July 11,2012 2:17:16 PM CDT</td>
+						<td width="300" align="center" th:text="${message.summary}" >The summary</td>
+						<td width="300" align="center" th:text="${message.text}" >The text</td>
+						<td width="50" align="center"><a href="view.html" th:href="@{'/message/delete/id=' + ${message.id}}">删除</a></td>
+						<td width="50" align="center"><a href="view.html" th:href="@{'/message/modify/id=' + ${message.id}}">修改</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
