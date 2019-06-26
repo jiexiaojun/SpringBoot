@@ -1,0 +1,16 @@
+选中/spring-boot-jdbc/src/main/java/com/allen/SpringBootJdbcApplication.java文件 右键运行
+
+使用postman访问
+http://localhost:8080/web/mvc/user/save
+
+body:
+{"id": 520,"name": "LiuLi"}
+
+使用postman访问
+http://localhost:8080/web/flux/user/save
+
+body:
+{"id": 520,"name": "LiuLi"}
+
+
+多数据源
