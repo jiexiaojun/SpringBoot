@@ -1,4 +1,4 @@
-package com.neo;
+package com.allen;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;

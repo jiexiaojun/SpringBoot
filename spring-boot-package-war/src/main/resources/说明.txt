@@ -1,0 +1,14 @@
+选中/spring-boot-package-war/src/main/java/com/allen/Application.java文件 右键运行
+
+浏览器访问
+http://localhost:8080/hello
+
+
+选中项目的pom.xml文件  右键  ran as Maven install 进行打包
+ <packaging>war</packaging>
+ <packaging>jar</packaging>
+ 
+ 本例打包成war  执行完成后，在target目录下面 找到文件 
+ 
+ 放入tomcat的webapps目录下 即可完成发布
+ 

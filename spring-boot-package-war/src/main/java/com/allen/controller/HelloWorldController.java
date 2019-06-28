@@ -1,4 +1,4 @@
-package com.neo.controller;
+package com.allen.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,6 +8,6 @@ public class HelloWorldController {
 
 	@RequestMapping("/hello")
 	public String index() {
-		return "Hello World";
+		return "Hello World！I am learning SpringBoot Maven 打包";
 	}
 }
