@@ -13,4 +13,7 @@ body:
 {"id": 520,"name": "LiuLi"}
 
 
+使用浏览器访问
+http://localhost:8080/web/flux/findAll
+
 多数据源

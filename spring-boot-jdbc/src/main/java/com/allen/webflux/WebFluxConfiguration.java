@@ -27,7 +27,12 @@ public class WebFluxConfiguration {
 	public RouterFunction<ServerResponse> saveUser(UserHandler userHandler) {
 		return RouterFunctions.route(RequestPredicates.POST("/web/flux/user/save"),
 				userHandler::save);
+	}
 
+	@Bean
+	public RouterFunction<ServerResponse> findAllUser(UserHandler userHandler) {
+		return RouterFunctions.route(RequestPredicates.POST("/web/flux/findAll"),
+				userHandler::findAll);
 	}
 }
 

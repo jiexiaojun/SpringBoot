@@ -7,11 +7,13 @@
  */
 package com.allen.webflux;
 
+import java.util.Collection;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import com.allen.domain.User;
 import com.allen.repository.UserRepository;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
@@ -30,12 +32,26 @@ public class UserHandler {
 	}
 
 	public Mono<ServerResponse> save(ServerRequest serverRequest) {
+
+		System.err.println(serverRequest.uri());
+
+
 		// 在sprign web mvc 中使用@RequestBody
 		// 在sprign web Flux 中使用ServerRequest
 		System.out.println("UserHandler Thread:" + Thread.currentThread().getName());
 		Mono<User> userMono = serverRequest.bodyToMono(User.class);
 		Mono<Boolean> booleanMono = userMono.map(userRepository::save);
 		return ServerResponse.ok().body(booleanMono, boolean.class);
+	}
+
+
+	public Mono<ServerResponse> findAll(ServerRequest serverRequest) {
+		System.err.println(serverRequest.uri());
+		// 在sprign web mvc 中使用@RequestBody
+		// 在sprign web Flux 中使用ServerRequest
+		Collection<User> users = userRepository.findAll();
+		Flux<User> userFlux = Flux.fromIterable(users);
+		return ServerResponse.ok().body(userFlux, User.class);
 	}
 
 }

@@ -11,7 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Collection;
-import java.util.Collections;
+import java.util.concurrent.ConcurrentHashMap;
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -139,9 +139,16 @@ public class UserRepository {
 		return success;
 	}
 
+	private static ConcurrentHashMap<Long, User> repository = new ConcurrentHashMap<>();
 
-	public Collection<User> finall() {
-		return Collections.emptyList();
+	public Collection<User> findAll() {
+		User user = new User();
+		user.setId(1);
+		user.setName("刘丽美女");;
+		repository.put(1l, user);
+		repository.put(2l, user);
+		repository.put(3l, user);
+		return repository.values();
 
 	}
 
