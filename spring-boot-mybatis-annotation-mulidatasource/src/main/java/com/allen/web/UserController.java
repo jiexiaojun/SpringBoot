@@ -1,13 +1,13 @@
-package com.neo.web;
+package com.allen.web;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.neo.entity.UserEntity;
-import com.neo.mapper.test1.User1Mapper;
-import com.neo.mapper.test2.User2Mapper;
+import com.allen.entity.UserEntity;
+import com.allen.mapper.test1.User1Mapper;
+import com.allen.mapper.test2.User2Mapper;
 
 @RestController
 public class UserController {
@@ -33,13 +33,13 @@ public class UserController {
 	}
 
 	@RequestMapping("/add")
-	// http://localhost:8080/add?userName=aa&passWord=a123456&userSex=MAN&nickName=昵称aa
+	// http://localhost:8080/add?userName=ll&passWord=a123456&userSex=MAN
 	public void save(UserEntity user) {
 		user2Mapper.insert(user);
 	}
 
 	@RequestMapping(value = "update")
-	// http://localhost:8080/update?id=10&userName=aa&passWord=a123456&userSex=MAN&nickName=昵称aa
+	// http://localhost:8080/update?id=4&userName=aa666
 	public void update(UserEntity user) {
 		user2Mapper.update(user);
 	}

@@ -1,12 +1,11 @@
-package com.neo.mapper.test1;
-
-import com.neo.entity.UserEntity;
-import com.neo.enums.UserSexEnum;
-import org.apache.ibatis.annotations.*;
+package com.allen.mapper.test2;
 
 import java.util.List;
+import org.apache.ibatis.annotations.*;
+import com.allen.entity.UserEntity;
+import com.allen.enums.UserSexEnum;
 
-public interface User1Mapper {
+public interface User2Mapper {
 
 
 	@Select("SELECT * FROM users")
