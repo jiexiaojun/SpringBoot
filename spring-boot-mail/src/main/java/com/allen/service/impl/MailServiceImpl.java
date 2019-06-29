@@ -1,4 +1,4 @@
-package com.neo.service.impl;
+package com.allen.service.impl;
 
 import java.io.File;
 import javax.mail.MessagingException;
@@ -12,7 +12,7 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
-import com.neo.service.MailService;
+import com.allen.service.MailService;
 
 /**
  * Created by summer on 2017/5/4.
