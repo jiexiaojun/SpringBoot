@@ -1,4 +1,4 @@
-package com.neo.controller;
+package com.allen.controller;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
