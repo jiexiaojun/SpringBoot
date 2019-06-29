@@ -31,7 +31,7 @@ public class WebFluxConfiguration {
 
 	@Bean
 	public RouterFunction<ServerResponse> findAllUser(UserHandler userHandler) {
-		return RouterFunctions.route(RequestPredicates.POST("/web/flux/findAll"),
+		return RouterFunctions.route(RequestPredicates.GET("/web/flux/findAll"),
 				userHandler::findAll);
 	}
 }

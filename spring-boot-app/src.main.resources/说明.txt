@@ -1,0 +1,15 @@
+选中/spring-boot-app/src/main/java/com/allen/SpringBootAppApplication.java文件 右键运行
+
+浏览器访问(spring web mvc 方式)
+http://localhost:8080/user/save?name=allen
+
+浏览器访问(spring web flux方式)
+http://localhost:8080/web/flux/users1
+http://localhost:8080/web/flux/users2
+
+
+
+
+构建多模块应用步骤 
+1、把主工程pom.xml packaging 从其他的改成pom
+2、
