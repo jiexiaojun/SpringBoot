@@ -1,8 +1,7 @@
-package com.neo.service;
-
-import com.neo.entity.UserForJPA;
+package com.allen.service;
 
 import java.util.List;
+import com.allen.entity.UserForJPA;
 
 public interface UserService {
 

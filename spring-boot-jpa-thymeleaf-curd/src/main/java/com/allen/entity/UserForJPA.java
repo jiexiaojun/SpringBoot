@@ -1,4 +1,4 @@
-package com.neo.entity;
+package com.allen.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

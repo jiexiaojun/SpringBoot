@@ -1,11 +1,11 @@
-package com.neo.service.impl;
+package com.allen.service.impl;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.neo.entity.UserForJPA;
-import com.neo.repository.UserRepository;
-import com.neo.service.UserService;
+import com.allen.entity.UserForJPA;
+import com.allen.repository.UserRepository;
+import com.allen.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {

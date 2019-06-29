@@ -1,4 +1,4 @@
-package com.neo.utils;
+package com.allen.utils;
 
 /**
  * @项目名称：spring-boot-jpa-thymeleaf-curd

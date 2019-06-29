@@ -1,7 +1,7 @@
-package com.neo.repository;
+package com.allen.repository;
 
-import com.neo.entity.UserForJPA;
 import org.springframework.data.jpa.repository.JpaRepository;
+import com.allen.entity.UserForJPA;
 
 public interface UserRepository extends JpaRepository<UserForJPA, Long> {
 
