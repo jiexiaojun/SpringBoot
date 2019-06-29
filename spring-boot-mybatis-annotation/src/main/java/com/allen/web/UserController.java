@@ -1,12 +1,12 @@
-package com.neo.web;
+package com.allen.web;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.neo.entity.UserEntity;
-import com.neo.mapper.UserMapper;
+import com.allen.entity.UserEntity;
+import com.allen.mapper.UserMapper;
 
 @RestController
 public class UserController {

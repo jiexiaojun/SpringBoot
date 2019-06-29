@@ -1,4 +1,4 @@
-package com.neo.enums;
+package com.allen.enums;
 
 public enum UserSexEnum {
 	MAN, WOMAN

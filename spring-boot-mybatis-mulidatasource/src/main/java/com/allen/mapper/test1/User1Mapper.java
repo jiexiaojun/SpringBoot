@@ -1,8 +1,7 @@
-package com.neo.mapper.test1;
-
-import com.neo.entity.UserEntity;
+package com.allen.mapper.test1;
 
 import java.util.List;
+import com.allen.entity.UserEntity;
 
 public interface User1Mapper {
 	

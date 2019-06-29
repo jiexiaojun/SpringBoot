@@ -1,4 +1,4 @@
-package com.neo;
+package com.allen;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
