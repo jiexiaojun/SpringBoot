@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.allen</groupId>
+    <artifactId>spring-boot-mavenweb-parent</artifactId>
+    <version>0.0.1-snapshot</version>
+  </parent>
+  <artifactId>service</artifactId>
+  <name>service</name>
+  <packaging>jar</packaging>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+   
+	<!--service依赖dao和domain，但是我们只需添加dao的依赖即可，因为dao已经依赖了domain -->
+     <dependency>
+       <groupId>com.allen</groupId>
+       <artifactId>dao</artifactId>
+       <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+  
+  <properties>
+        <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+    </properties>
+</project>

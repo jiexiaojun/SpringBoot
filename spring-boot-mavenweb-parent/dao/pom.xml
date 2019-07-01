@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.allen</groupId>
+    <artifactId>spring-boot-mavenweb-parent</artifactId>
+    <version>0.0.1-snapshot</version>
+  </parent>
+
+  <artifactId>dao</artifactId>
+  <name>dao</name>
+  <packaging>jar</packaging>
+  <url>http://maven.apache.org</url>
+  <dependencies>	
+	<!--dao需要使用到domain中的类，所以需要添加对domain模块的依赖-->
+     <dependency>
+       <groupId>com.allen</groupId>
+       <artifactId>domain</artifactId>
+       <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+  
+  
+</project>
